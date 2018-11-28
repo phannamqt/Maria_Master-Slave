@@ -73,8 +73,8 @@ if [[ "$pkg1" == *"MariaDB-server-10.1."*  ]];then
 	 echo "==========================================="
 	 mkdir /var/log/mysql
 	 sed -i '/# this is only for the mysqld standalone daemon/d' /etc/my.cnf.d/server.cnf
-	 sed -i "/mysqld/ a\replicate-do-db=opencps" /etc/my.cnf.d/server.cnf
-	 mysql -u root -p$password -e "create database opencps";
+	 sed -i "/mysqld/ a\replicate-do-db=demosql" /etc/my.cnf.d/server.cnf
+	 mysql -u root -p$password -e "create database demosql";
 	 sed -i '/mysqld/ a\server_id=1' /etc/my.cnf.d/server.cnf
 	 sed -i '/mysqld/ a\log-bin=master-bin' /etc/my.cnf.d/server.cnf
 	 sed -i '/mysqld/ a\log_error=/var/log/mysql/mysql.log' /etc/my.cnf.d/server.cnf
@@ -159,7 +159,7 @@ if [[ "$pkg1" == *"MariaDB-server-10.1."*  ]];then
 	 echo ''
 	 echo '----------------Result-------------------'
 	 echo '- Installed MariaDB Server                            DONE!'
-	 echo '- Created and Imported data into OpenCPS Database     DONE!'
+	 echo '- Created and Imported data into demosql Database     DONE!'
 	 echo '- Root Database password: '$password
 	 echo '- User/Pass Slave:  slave/'$passslave
 
