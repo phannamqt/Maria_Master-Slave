@@ -23,10 +23,12 @@ Download từng Script Master.sh, Slave.sh về node tương ứng và chạy b�
 ví dụ: 
 Trên Master Server:
 ```
+#wget https://raw.githubusercontent.com/phannamqt/Maria_Master-Slave/master/Master.sh
 #sh Master.sh
 ```
 Slave Server:
 ```
+#wget https://raw.githubusercontent.com/phannamqt/Maria_Master-Slave/master/Slave.sh
 #sh Slave.sh
 
 ```
@@ -34,6 +36,7 @@ Slave Server:
 
 Tiếp theo sẽ tiến hành Import dữ liệu trên Master
 ```
+#wget https://raw.githubusercontent.com/phannamqt/Maria_Master-Slave/master/ImportDatabase.sh
 #ImportDatabase.sh
 ```
 Trong quá trình chạy tool import này chương trình sẽ hỏi mật khẩu root Master Server 
